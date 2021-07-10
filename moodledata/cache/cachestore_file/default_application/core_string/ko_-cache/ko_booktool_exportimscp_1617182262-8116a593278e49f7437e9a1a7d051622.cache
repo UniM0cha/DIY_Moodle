@@ -1,0 +1,1 @@
+a:6:{s:17:"eventbookexported";s:13:"Book exported";s:18:"exportimscp:export";s:53:"전자 책을 IMS 콘텐츠 팩키지로 내보내기";s:13:"generateimscp";s:36:"IMS 콘텐츠 패키지 생성하기";s:10:"nochapters";s:75:"전자 책의 장이 없어서 IMS CP로 내보내기 할 수 없습니다.";s:10:"pluginname";s:43:"IMS 콘텐츠 패키지 내보내기 예약";s:16:"privacy:metadata";s:63:"The Book IMS CP export plugin does not store any personal data.";}

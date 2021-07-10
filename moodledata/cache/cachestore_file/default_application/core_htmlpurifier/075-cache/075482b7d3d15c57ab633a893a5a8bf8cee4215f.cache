@@ -1,0 +1,4 @@
+s:500:"<p>퀴즈 모듈은 선생님들로 하여금 선다형, 참/거짓형, 짝찾기형 및 여타 유형의 질문을을 가지고 퀴즈를 만들수 있게 해 줍니다. 매 시도는 자동으로 채점되고 선생님들은 피드백이나 정답 등을 보여줄지 여부를 선택할 수 있습니다.</p>
+
+<div class="helpdoclink"><a href="https://docs.moodle.org/38/ko/mod/quiz/view" class="helplinkpopup"><i class="icon fa fa-info-circle fa-fw iconhelp icon-pre"></i>도움글 더</a></div>
+";

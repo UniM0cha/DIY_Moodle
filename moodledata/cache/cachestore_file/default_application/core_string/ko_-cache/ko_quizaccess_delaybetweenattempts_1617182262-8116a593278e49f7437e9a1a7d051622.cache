@@ -1,0 +1,1 @@
+a:4:{s:10:"pluginname";s:37:"시도간 지연 퀴즈 접근 규칙";s:16:"privacy:metadata";s:84:"The Delay between attempts quiz access rule plugin does not store any personal data.";s:13:"youcannotwait";s:68:"재 시도를 하기 전에 우선 이 시험을 종료하십시오.";s:11:"youmustwait";s:133:"이 질문을 다시 시도하려면 잠시 기다려야만 합니다. 재 시도는 {$a} 후에 가능하도록 되어 있습니다.";}

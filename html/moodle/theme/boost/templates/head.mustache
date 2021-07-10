@@ -1,0 +1,181 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page header.
+}}
+{{{ output.doctype }}}
+<html {{{ output.htmlattributes }}}>
+<head>
+    <title>{{{ output.page_title }}}</title>
+    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
+    {{{ output.standard_head_html }}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      h1 {font-family: comic sans; color: #000;}
+      
+      h2, h3 {
+        font-family: 'Cafe24Ohsquare'; }
+
+      .fixed-top{background: #C4DEFF !important;}
+
+      .btn.nav-link{background: #C4DEFF !important;}
+      #page-footer{
+
+        display :none;
+        }
+
+        .img-fluid1{
+            
+            width: 5000px;
+            height: 270px;
+        }
+        .img-fluid{
+            display:none;
+        }
+    .contentTextTitle {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    }
+
+
+.contentText__warp {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    .cList {
+            width: 100%;
+            display: flex;
+            height: 187px;
+            align-items: center;
+            justify-content: flex-start;
+    }
+
+    .cList:nth-child(2n) {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+    .cList:not(:last-of-type) {
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+        
+    .cList:nth-child(2n) h3 {
+    background: #9a36fe;
+    color: #fff;
+}
+
+    .cList h3 {
+    padding: 10px;
+    background: #ffc000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'NaNumGothicCoding-Bold';
+    width: 212px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1%;
+}
+
+@keyframes Homecontent {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 10px;
+    }
+}
+
+.Homecontent {
+    animation: Homecontent 0.4s ease-in Infinite Alternate;
+    
+
+    position: relative;
+    max-width: 58%;
+}
+
+.cListIcon {
+    box-shadow: 0 0 10px #e3e3e3;
+    border-radius: 20px;
+    vertical-align: top;
+    background: #fff;
+    width: 127px;
+    height: 127px;
+    position: relative;
+}
+
+.cListIcon > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cListText {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.contentHomeContent {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 3%;
+    line-height: 30px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.contentHome__warp {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    height:40%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+{{!
+div.d-flex.align-items-center{/* position: relative; */ width: 100%;height: 420px;/* padding-top: 180px; *//* padding-bottom: 18.5%; */background-image: url(/moodle/theme/boost/templates/main/head-bg.png);background-size: cover;background-repeat: no-repeat;background-position: top center;transition: all 1s;
+}
+}}
+    </style>
+
+    <script>
+       
+        console.log('this is current path: ' + window.location.pathname)
+        if(window.location.pathname == "/moodle/"){
+            document.write("<style> div.d-flex.align-items-center{/* position: relative; */ width: 100%;height: 420px;/* padding-top: 180px; *//* padding-bottom: 18.5%; */background-image: url(/moodle/theme/boost/templates/main/head-bg.png);background-size: cover;background-repeat: no-repeat;background-position: top center;transition: all 1s;} </style>");
+ 
+            
+                
+            console.log('head css pathname: ' + window.location.pathname);
+        }
+    </script>
+</head>

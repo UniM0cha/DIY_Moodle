@@ -1,0 +1,7 @@
+[2021-03-18 16:47:45.127] [renderer1] [error] Failed to execute git
+[2021-03-18 16:47:49.683] [renderer1] [error] Failed to execute git
+[2021-03-18 16:48:17.517] [renderer1] [error] Failed to execute git
+[2021-03-18 16:56:18.457] [renderer1] [error] An unknown error occurred. Please consult the log for more details.: EntryNotFound (FileSystemError): 
+	at u.readFile (/usr/share/code/resources/app/extensions/git/dist/main.js:10:471219)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:97:5)

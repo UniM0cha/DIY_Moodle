@@ -1,0 +1,2 @@
+a:7:{s:15:"informationtext";s:13:"정보 문장";s:10:"pluginname";s:6:"설명";s:15:"pluginname_help";s:333:"설명은 실제 질문 유형은 아닙니다. 단지 강좌 페이지의 표지처럼 답을 요구하지 않고 문서를 제시할 수 있습니다.
+질문 내용은 시도시나 검토시에 모두 볼 수 있습니다. 복습 페이지에서는 어떤 일반적인 피드백도 검토페이지에만 표시될 수 있습니다.";s:16:"pluginnameadding";s:13:"설명 추가";s:17:"pluginnameediting";s:13:"설명 편집";s:17:"pluginnamesummary";s:249:"이것은 실제 질문이 아닙니다. 퀴즈에 지시사항, 루브릭 혹은  기타 내용을 추가하는 수단이 될 수 있습니다. 이는 표지가 강좌 페이지에서 어떤 내용을 추가할 때 사용되는 것과 같습니다.";s:16:"privacy:metadata";s:70:"The Description question type plugin does not store any personal data.";}

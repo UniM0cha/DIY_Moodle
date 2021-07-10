@@ -1,0 +1,125 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_boost/columns2
+
+    Admin time setting template.
+
+    Boost 2 column layout template.
+
+    Context variables required for this template:
+    * sitename - The name of the site
+    * output - The core renderer for the page
+    * bodyattributes - attributes for the body tag as a string of html attributes
+    * sidepreblocks - HTML for the blocks
+    * hasblocks - true if there are blocks on this page
+    * navdraweropen - true if the nav drawer should be open on page load
+    * regionmainsettingsmenu - HTML for the region main settings menu
+    * hasregionmainsettingsmenu - There is a region main settings menu on this page.
+
+    Example context (json):
+    {
+        "sitename": "Moodle",
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Test page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         },
+        "bodyattributes":"",
+        "sidepreblocks": "<h2>Blocks html goes here</h2>",
+        "hasblocks":true,
+        "navdraweropen":true,
+        "regionmainsettingsmenu": "",
+        "hasregionmainsettingsmenu": false
+    }
+}}
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+{{!
+{
+  "name": "Chris",
+  "value": 10000,
+  "taxed_value": 10000 - (10000 * 0.4),
+  "in_ca": true
+}
+}}
+
+
+
+<div id="page-wrapper" class="d-print-block">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    {{> theme_boost/navbar }}
+    {{> theme_boost/nav-drawer }}
+
+    <div id="page" class="container-fluid d-print-block">
+        
+        {{{ output.full_header }}}
+        
+        <script>
+            console.log(window.location.pathname);
+
+            if(window.location.pathname == "/moodle/"){
+                document.write("<div id='page-content' class='row pb-3 d-print-block'><div id='region-main-box' class='col-12'><div class='contentText'><div class='contentText__warp'><div class='contentTextTitle'><img src='/moodle/theme/boost/templates/main/head-content.png' alt='logo' class='Homecontent'><div class='contentTextSubTitle'><h2>D.I.Y로 코딩을 배워보세요.</h2><p>블록코딩을 하면서 개발 커리어를 쌓아보세요.<br>D.I.Y를 통해 배우는 점은 아래와 같습니다.</p></div></div><br><br><div class='contentTextContent'><div class='cList'><div class='cListIcon'><img src='/moodle/theme/boost/templates/main/content_text_icon1.png' alt=''></div><div class='cListText'><h3>블록체인</h3><p>D.I.Y는 블록코딩을 기반으로 컴퓨터 언어를 직접 쓰는 것이 아니라 미리 만들어 놓은 블록을 제공함으로써 <br> 언어에 대한 장벽을 없애고, 문제해결 방식에 초점을 맞췄습니다.</p></div></div><div class='cList'><div class='cListIcon'><img src='/moodle/theme/boost/templates/main/content_text_icon2.png' alt=''></div><div class='cListText'><h3>파이썬</h3><p>D.I.Y는 블록옆에 파이썬코드가 보입니다. 블록프로그래밍을 하면서 파이썬을 함께 <br> 학습할 수 있습니다.</p></div></div><div class='cList'><div class='cListIcon'><img src='/moodle/theme/boost/templates/main/content_text_icon3.png' alt=''></div><div class='cListText'><h3>데이터 사이언스</h3><p>D.I.Y는 탐색적 데이터 분석(EDA)이 가능하며 이를 통해 데이터에 대한 특징을 이해하며 머신러닝을 위한 <br> 전처리 등을 학습 할 수 있습니다.</p></div></div><div class='cList'><div class='cListIcon'><img src='/moodle/theme/boost/templates/main/content_text_icon4.png' alt=''></div><div class='cListText'><h3>머신러닝, 딥러닝</h3><p>D.I.Y는 머신러닝 학습에 특화되어있습니다. 미리 만들어져있는 다양한 머신러닝 라이브러리를 통해 <br> 새로운 경험을 해볼 수 있습니다.</p></div></div></div></div></div>");
+
+            }
+        </script>
+        
+                {{#hasregionmainsettingsmenu}}
+                <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
+                    <div> {{{ output.region_main_settings_menu }}} </div>
+                </div>
+                {{/hasregionmainsettingsmenu}}
+                <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
+                    {{#hasregionmainsettingsmenu}}
+                        <div class="region_main_settings_menu_proxy"></div>
+                    {{/hasregionmainsettingsmenu}}
+                    {{{ output.course_content_header }}}
+                    {{{ output.main_content }}}
+                    {{{ output.activity_navigation }}}
+                    {{{ output.course_content_footer }}}
+
+                </section>
+                {{#hasblocks}}
+                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+                    {{{ sidepreblocks }}}
+                </section>
+                {{/hasblocks}}
+            </div>
+        </div>
+    </div>
+    {{{ output.standard_after_main_region_html }}}
+    {{> theme_boost/footer }}
+</div>
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+M.util.js_pending('theme_boost/drawer');
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+  M.util.js_complete('theme_boost/drawer');
+});
+{{/js}}

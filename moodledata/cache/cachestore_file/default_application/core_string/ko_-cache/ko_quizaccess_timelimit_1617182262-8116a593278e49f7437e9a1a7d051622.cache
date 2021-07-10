@@ -1,0 +1,1 @@
+a:5:{s:18:"confirmstartheader";s:10:"Time limit";s:12:"confirmstart";s:204:"시도에는  {$a}의 시간 제한이 있습니다. 시작과 동시에 타이머가 작동되고 멈출 수 없습니다. 제한 시간 내에 시도를 완료해야 합니다. 시작하시겠습니까?";s:10:"pluginname";s:34:"시간 제한 퀴즈 접근 규칙";s:16:"privacy:metadata";s:72:"The Time limit quiz access rule plugin does not store any personal data.";s:13:"quiztimelimit";s:18:"시간제한: {$a}";}

@@ -1,0 +1,21 @@
+a:26:{s:8:"encoding";s:16:"파일 엔코딩";s:13:"expiredaction";s:20:"등록 만료 조치";s:18:"expiredaction_help";s:150:"Select action to carry out when user enrolment expires. Please note that some user data and settings are purged from course during course unenrolment.";s:14:"filelockedmail";s:344:"파일 기반 등록({$a})을 하기 위해 사용되는 텍스트파일은 크론과정에 의하여 삭제될 수 없습니다. 이것은 주로 허가가 잘못된 것을 의미합니다. 무들이 파일을 삭제시킬 수 있도록 허가를 수정하십시오. 그렇지 않으면 그것은 반복적으로 처리될 수도 있습니다.";s:21:"filelockedmailsubject";s:31:"중대한 오류: 등록 화일";s:15:"flatfile:manage";s:36:"수동으로 사용자 등록 관리";s:16:"flatfile:unenrol";s:49:"수동으로 강좌에서 사용자 등록 해지";s:18:"flatfileenrolments";s:26:"Flat file (CSV) enrolments";s:12:"flatfilesync";s:24:"Flat file enrolment sync";s:8:"location";s:13:"화일 위치";s:13:"location_desc";s:92:"Specify full path to the enrolment file. The file is automatically deleted after processing.";s:11:"notifyadmin";s:22:"관리자에게 통지";s:14:"notifyenrolled";s:32:"등록된 사용자에게 통지";s:14:"notifyenroller";s:29:"등록 책임자에게 통지";s:34:"messageprovider:flatfile_enrolment";s:30:"플랫 파일 등록 메세지";s:7:"mapping";s:25:"Flat 파일 역할 매핑";s:10:"pluginname";s:12:"평문 (CSV)";s:15:"pluginname_desc";s:896:"이 방법은 명시한 위치에서 특별하게 포맷된 파일을 반복적으로 찾고 처리합니다.
+이 파일은 콤마로 분리되어 있으며 줄당 4개 혹은 6개의 항목을 가지고 있다고 가정합니다.
+<pre class="informationbox">
+* operation, role, idnumber(user), idnumber(course) [, starttime, endtime]
+where:
+* operation = add | del
+* role = student | teacher | teacheredit
+* idnumber(user) = idnumber in the user table NB not id
+* idnumber(course) = idnumber in the course table NB not id
+* starttime = start time (in seconds since epoch) - optional
+* endtime = end time (in seconds since epoch) - optional
+</pre>
+다음과 같이 보일 수도 있습니다.
+<pre class="informationbox">
+add, student, 5, CF101
+add, teacher, 6, CF101
+add, teacheredit, 7, CF101
+del, student, 8, CF101
+del, student, 17, CF101
+add, student, 21, CF101, 1091115000, 1091215000
+</pre>";s:31:"privacy:metadata:enrol_flatfile";s:119:"The Flat file (CSV) enrolment plugin may store personal data relating to future enrolments in the enrol_flatfile table.";s:38:"privacy:metadata:enrol_flatfile:action";s:47:"The enrolment action expected on the given date";s:40:"privacy:metadata:enrol_flatfile:courseid";s:44:"The course ID to which the enrolment relates";s:38:"privacy:metadata:enrol_flatfile:roleid";s:47:"The ID of the role to be assigned or unassigned";s:41:"privacy:metadata:enrol_flatfile:timestart";s:34:"The time when the enrolment starts";s:39:"privacy:metadata:enrol_flatfile:timeend";s:32:"The time when the enrolment ends";s:44:"privacy:metadata:enrol_flatfile:timemodified";s:39:"The time when the enrolment is modified";s:38:"privacy:metadata:enrol_flatfile:userid";s:55:"The ID of the user to which the role assignment relates";}

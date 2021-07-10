@@ -1,0 +1,36 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git init
+> git rev-parse --git-dir
+Open repository: /var/www/html/moodle
+> git status -z -u
+> git show --textconv :lib/navigationlib.php
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git check-ignore -v -z --stdin
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git show --textconv :lib/navigationlib.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git show --textconv :lib/navigationlib.php
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git show --textconv :lib/navigationlib.php
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git show --textconv :lib/navigationlib.php
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/html/moodle/lib/navigationlib.php
+fatal: your current branch 'master' does not have any commits yet
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/html/moodle/lib/navigationlib.php
+fatal: your current branch 'master' does not have any commits yet
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/html/moodle/lib/navigationlib.php
+fatal: your current branch 'master' does not have any commits yet
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+> git show --textconv :lib/navigationlib.php
+> git check-ignore -v -z --stdin
+> git ls-files --stage -- /var/www/html/moodle/lib/navigationlib.php
+fatal: not a git repository (or any of the parent directories): .git

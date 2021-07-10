@@ -1,0 +1,350 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="n0}#)Q-w}8l?x(Pi8oB*">html</variable>
+    <variable id="R9m4*_jm7sUVQ:d2}wI~">soup</variable>
+    <variable id="%ctJXoLg}O,Uq[G+0xz(">result</variable>
+    <variable id="]geSyN7+i*Kd6W.x^`E3">x_data</variable>
+    <variable id=".|7fB[nDcASezZ.U9*2B">i</variable>
+    <variable id="X,vto}jsyDt%593V!(IL">y_data</variable>
+    <variable id="E0T2Y(8=5W.i8-e?*8sk">x</variable>
+    <variable id="?{^~oNR3^WwDoCm6vz|f">plt</variable>
+  </variables>
+  <block type="croll_bs4_import" id="$-Agjm78iRAJn~h^thwF" x="-1041" y="-100">
+    <next>
+      <block type="croll_requests_get" id="t[,O9$AF=Y2`_jI}1Z9P">
+        <value name="URL">
+          <shadow type="indata" id="o,NJa^`m0:w!Wetb@Dcl">
+            <field name="indata1">"http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=13&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun="</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="croll_req_text" id="*Z/z8)G/zP;uO[gw1FDb">
+            <value name="VAR">
+              <block type="variables_get" id="`BW?[u/er;-+lL$icwIB">
+                <field name="VAR" id="n0}#)Q-w}8l?x(Pi8oB*">html</field>
+              </block>
+            </value>
+            <next>
+              <block type="croll_url_load" id="4gII4TXwL@+(N9/Y5-Em">
+                <value name="VAR">
+                  <block type="variables_get" id="x*%criy[oxXvTx$`xHW*">
+                    <field name="VAR" id="R9m4*_jm7sUVQ:d2}wI~">soup</field>
+                  </block>
+                </value>
+                <value name="VAR2">
+                  <block type="variables_get" id="OLiL:vs4CuZ+rNMQ3SfF">
+                    <field name="VAR" id="n0}#)Q-w}8l?x(Pi8oB*">html</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="croll_find_all" id="`3DD[$a_Dd#syyuR314D">
+                    <value name="VAR">
+                      <block type="variables_get" id="`0Ey;,FE-1utOZk~g.Sc">
+                        <field name="VAR" id="%ctJXoLg}O,Uq[G+0xz(">result</field>
+                      </block>
+                    </value>
+                    <value name="VAR2">
+                      <block type="variables_get" id="nZd|I/GC`S`Y8X,xkmm1">
+                        <field name="VAR" id="R9m4*_jm7sUVQ:d2}wI~">soup</field>
+                      </block>
+                    </value>
+                    <value name="INPUT">
+                      <shadow type="indata" id="{NynsUvZ7Ns{GY75@h[J">
+                        <field name="indata1">"th",  scope="row"</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="create_list" id="L@/f-2C#J:54HO,jKD4f">
+                        <value name="list">
+                          <block type="variables_get" id="bJZuXY_puXx@+H7$gw80">
+                            <field name="VAR" id="]geSyN7+i*Kd6W.x^`E3">x_data</field>
+                          </block>
+                        </value>
+                        <value name="text">
+                          <shadow type="indata" id="G_yIis6!5ZM!@Bc)kU8`">
+                            <field name="indata1"></field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="py_for1" id="L45w%zLcULjlVNmVD7AC">
+                            <field name="DROP">range</field>
+                            <value name="item">
+                              <block type="variables_get" id="pZie!`,cStJIqdC[ZyBx">
+                                <field name="VAR" id=".|7fB[nDcASezZ.U9*2B">i</field>
+                              </block>
+                            </value>
+                            <value name="list">
+                              <shadow type="indata" id="mLYy^SiqaBE@cqWwVkj3">
+                                <field name="indata1">1,len(result)-1</field>
+                              </shadow>
+                            </value>
+                            <statement name="value">
+                              <block type="create_new_list2" id="/+dVMqQ{AZ~9xq{OG?X}">
+                                <field name="PROPERTY">APPEND</field>
+                                <value name="VAR1">
+                                  <block type="variables_get" id="KJvoL5?vFfIn/O?FSgvu">
+                                    <field name="VAR" id="]geSyN7+i*Kd6W.x^`E3">x_data</field>
+                                  </block>
+                                </value>
+                                <value name="DIVISOR">
+                                  <shadow type="indata" id="a,yr;`V_`zXAzMOPfA$k">
+                                    <field name="indata1"></field>
+                                  </shadow>
+                                  <block type="croll_get_text" id="1`DL)IC_nE!KKT2XXIJB">
+                                    <value name="VAR">
+                                      <block type="variables_get" id="ryB3=G!^W(J%Hg99j#J=">
+                                        <field name="VAR" id="%ctJXoLg}O,Uq[G+0xz(">result</field>
+                                      </block>
+                                    </value>
+                                    <value name="VAR2">
+                                      <shadow type="indata" id="cvoy)dRQ`F.(b?SJ4V^c">
+                                        <field name="indata1">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="NVb/d20^nkbipf9XmgA9">
+                                        <field name="VAR" id=".|7fB[nDcASezZ.U9*2B">i</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="printc" id="ub~(Rs$-dW{$#XgqfgX~">
+                                <value name="content">
+                                  <block type="variables_get" id="r9SKuNUSN^^cOWmzs?Lg">
+                                    <field name="VAR" id="]geSyN7+i*Kd6W.x^`E3">x_data</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="croll_find_all" id=",D~*K$HKf?Jxb,I-ddvQ">
+                                    <value name="VAR">
+                                      <block type="variables_get" id="8jwhXq)N5gW0Ulu^Z!#1">
+                                        <field name="VAR" id="%ctJXoLg}O,Uq[G+0xz(">result</field>
+                                      </block>
+                                    </value>
+                                    <value name="VAR2">
+                                      <block type="variables_get" id="#T+F9bvHQqcfVg*E;Z=|">
+                                        <field name="VAR" id="R9m4*_jm7sUVQ:d2}wI~">soup</field>
+                                      </block>
+                                    </value>
+                                    <value name="INPUT">
+                                      <shadow type="indata" id="=Mg?CgCq`5VmJZY;G8{E">
+                                        <field name="indata1">"td", headers="status_level l_type1"</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="create_list" id=")(p*Sj(LrdXgm41~D$lc">
+                                        <value name="list">
+                                          <block type="variables_get" id="A+Uc[Nd?s*fvuin,Z(mo">
+                                            <field name="VAR" id="X,vto}jsyDt%593V!(IL">y_data</field>
+                                          </block>
+                                        </value>
+                                        <value name="text">
+                                          <shadow type="indata" id=")/YViS:#ec|S)}:|d?OK">
+                                            <field name="indata1"></field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="py_for1" id="rDRvw_Gk-4sr/Qh,@Ye]">
+                                            <field name="DROP">range</field>
+                                            <value name="item">
+                                              <block type="variables_get" id="^!#e_Ql@[{I+MhiqmI=B">
+                                                <field name="VAR" id=".|7fB[nDcASezZ.U9*2B">i</field>
+                                              </block>
+                                            </value>
+                                            <value name="list">
+                                              <shadow type="indata" id="lQv+K{H{+$u6LU]7`3]k">
+                                                <field name="indata1">1,len(result)-1</field>
+                                              </shadow>
+                                            </value>
+                                            <statement name="value">
+                                              <block type="create_new_list2" id="4*ieAO;Uovmp9k%6iSW0">
+                                                <field name="PROPERTY">APPEND</field>
+                                                <value name="VAR1">
+                                                  <block type="variables_get" id="`;^uf[(CWV;MCkyhl{pq">
+                                                    <field name="VAR" id="X,vto}jsyDt%593V!(IL">y_data</field>
+                                                  </block>
+                                                </value>
+                                                <value name="DIVISOR">
+                                                  <shadow type="indata" id="~R}=!B^`f]~V:OuCJ$9D">
+                                                    <field name="indata1"></field>
+                                                  </shadow>
+                                                  <block type="convert_block" id=":1)U/NJa7)|}tk-MG^k(">
+                                                    <field name="NAME">int(</field>
+                                                    <value name="A">
+                                                      <shadow type="indata" id="w|CX5RS0}L7I89V(AxW@">
+                                                        <field name="indata1">1</field>
+                                                      </shadow>
+                                                      <block type="croll_get_text" id="va3vXHPC33ZErY;zw(;*">
+                                                        <value name="VAR">
+                                                          <block type="variables_get" id="UJscAPCbYS%A+E)WVUj-">
+                                                            <field name="VAR" id="%ctJXoLg}O,Uq[G+0xz(">result</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="VAR2">
+                                                          <shadow type="indata">
+                                                            <field name="indata1">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="dgGLhRo9K^:.@L;A,QtL">
+                                                            <field name="VAR" id=".|7fB[nDcASezZ.U9*2B">i</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="printc" id="Fmcn*_HYu%7Z,W~);18e">
+                                                <value name="content">
+                                                  <block type="variables_get" id="eCs`mQy]OslOXA}4+uU$">
+                                                    <field name="VAR" id="X,vto}jsyDt%593V!(IL">y_data</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="visualization_library" id="Lh78)@u,_uMiEzZDi`+d">
+                                                    <next>
+                                                      <block type="numpy_library" id="/vI=aWbwQ{a)di!/.{1e">
+                                                        <next>
+                                                          <block type="math_change" id=":PLiezhCQRU?#5qokmPc">
+                                                            <field name="VAR" id="E0T2Y(8=5W.i8-e?*8sk">x</field>
+                                                            <field name="NAME">=</field>
+                                                            <value name="DELTA">
+                                                              <shadow type="indata" id="fP;;=ej/[LRe%7i]m2q]">
+                                                                <field name="indata1">0</field>
+                                                              </shadow>
+                                                              <block type="numpy_numerical_ranges_basic1" id="O1{ZjY9YEnah5uM+Vi^V">
+                                                                <field name="numpy_Numerical_ranges_opt">np.arange</field>
+                                                                <value name="parameter1">
+                                                                  <shadow type="indata" id="rfckE,{?ho%Oy4x$x{On">
+                                                                    <field name="indata1"></field>
+                                                                  </shadow>
+                                                                  <block type="text_length" id="!`Y?wjzXM*}R0264tk#]">
+                                                                    <value name="VALUE">
+                                                                      <shadow type="indata" id="6BLSVwjGMOwrMJ-Fjz#y">
+                                                                        <field name="indata1"></field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="fAC~XNXO1xz-*VdzLHAv">
+                                                                        <field name="VAR" id="]geSyN7+i*Kd6W.x^`E3">x_data</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="printc" id="zab1g3uNnk2gKc{;UePM">
+                                                                <value name="content">
+                                                                  <block type="variables_get" id="R5Ts~6!o9aNuo#nm[{eL">
+                                                                    <field name="VAR" id="E0T2Y(8=5W.i8-e?*8sk">x</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="matplotlib_pre_graph_plt" id=":FU[OS22_Sr_!9kOIM:9">
+                                                                    <field name="matplotlib_graph_select">matplotlib_bar</field>
+                                                                    <value name="xx">
+                                                                      <shadow type="indata" id="A$3*JZMC)E#~rB)Gx30M">
+                                                                        <field name="indata1">x_data</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="3Fus!@u8I6$x}zR8qJ;j">
+                                                                        <field name="VAR" id="E0T2Y(8=5W.i8-e?*8sk">x</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="yy">
+                                                                      <shadow type="indata" id="kF2~I*YNR5b4NmvQ.v7d">
+                                                                        <field name="indata1">y_data</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="Zq:)YU(rG7m/w8^v!xa_">
+                                                                        <field name="VAR" id="X,vto}jsyDt%593V!(IL">y_data</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_graph_Title">
+                                                                      <shadow type="indata" id="+A8=X+V7{oQ4NYvWxsFC">
+                                                                        <field name="indata1">COV19</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_graph_Xlable">
+                                                                      <shadow type="indata" id="h[a;{hb$-ILATznrOlNk">
+                                                                        <field name="indata1">City</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_graph_Ylable">
+                                                                      <shadow type="indata" id="KdJX}tb{sdj=[5iH#S?N">
+                                                                        <field name="indata1">Person</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_legend">
+                                                                      <shadow type="indata" id="u0W14caP=.bPfsJaPH~y">
+                                                                        <field name="indata1">Person</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_color">
+                                                                      <shadow type="indata" id="y(LdoHHCg-J,C!C4B*P.">
+                                                                        <field name="indata1">"blue"</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="matplotlib_pre_other">
+                                                                      <shadow type="indata" id="k1MQnAT?$0B@%-5M4xB#">
+                                                                        <field name="indata1"></field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="set_xticks_yticks" id="LjEH#+Ku[K#2@NPF|dXO">
+                                                                        <value name="NAME">
+                                                                          <block type="variables_get" id="rVT-R7t]1B:bKs)(e!t,">
+                                                                            <field name="VAR" id="?{^~oNR3^WwDoCm6vz|f">plt</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="val_x">
+                                                                          <shadow type="indata" id="{:{!-n:P=8}-/`xZa$lC">
+                                                                            <field name="indata1"></field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="Y*]wet5nij$8!aY$X}2G">
+                                                                            <field name="VAR" id="E0T2Y(8=5W.i8-e?*8sk">x</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="val_y">
+                                                                          <shadow type="indata" id="k/]{m.72a?P-L?hDrduh">
+                                                                            <field name="indata1"></field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="matplotlib_plt_show" id="hL5!Dlz`irf}Jj4m3*Yr"></block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

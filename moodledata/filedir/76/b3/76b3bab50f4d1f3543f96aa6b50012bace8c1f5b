@@ -1,0 +1,194 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="!9;!.#xacL?Jrep.L)4r">html</variable>
+    <variable id="jYFoPAL]A`F,-y[qtM5@">soup</variable>
+    <variable id="Q65i+}zoIhl4Dh}5s9GL">result</variable>
+    <variable id="dZ]d_8c,Gj~j$k,0X~|y">total</variable>
+  </variables>
+  <block type="croll_bs4_import" id="xf;sn}oxrGE_V.mC0-GG" x="-1457" y="-70">
+    <next>
+      <block type="croll_requests_get" id="5oe:jKwalnY6^5w2aRH.">
+        <value name="URL">
+          <shadow type="indata" id="T5[Kf[ut[c5WckmYa6Y0">
+            <field name="indata1">"http://ncov.mohw.go.kr/"</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="croll_req_text" id="4jJn9YH-o0u!CBW=DhHX">
+            <value name="VAR">
+              <block type="variables_get" id="tE^85+M^+}eHt/6hOBLI">
+                <field name="VAR" id="!9;!.#xacL?Jrep.L)4r">html</field>
+              </block>
+            </value>
+            <next>
+              <block type="croll_url_load" id="[QhIHw,(#,mC`+x+Uq[G">
+                <value name="VAR">
+                  <block type="variables_get" id="-}ykqCU+JP4D4cQi2cXv">
+                    <field name="VAR" id="jYFoPAL]A`F,-y[qtM5@">soup</field>
+                  </block>
+                </value>
+                <value name="VAR2">
+                  <block type="variables_get" id="|$bjQEH,AKn#F4(CDG`l">
+                    <field name="VAR" id="!9;!.#xacL?Jrep.L)4r">html</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="croll_find_one" id=";}vt.!:+~il:g8C1rwLm">
+                    <value name="VAR">
+                      <block type="variables_get" id="}1]d}Nf2b9BQ^R6EV9lx">
+                        <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                      </block>
+                    </value>
+                    <value name="VAR2">
+                      <block type="variables_get" id="EK?*vVq-7kG0)K^jLq%|">
+                        <field name="VAR" id="jYFoPAL]A`F,-y[qtM5@">soup</field>
+                      </block>
+                    </value>
+                    <value name="INPUT">
+                      <shadow type="indata" id="X7K+[b4QNav*7t$@DBnC">
+                        <field name="indata1">"div", class_="liveNum_today_new"</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="croll_find_all" id="hDzzT3gR-ULeHP)iYS)G">
+                        <value name="VAR">
+                          <block type="variables_get" id="4y9c$U(@Od`iKASyXv/l">
+                            <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                          </block>
+                        </value>
+                        <value name="VAR2">
+                          <block type="variables_get" id="o.m:qKKjx:0DV@Z4_=xA">
+                            <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                          </block>
+                        </value>
+                        <value name="INPUT">
+                          <shadow type="indata" id="aN{V9=~?nkoVo(D1[~I`">
+                            <field name="indata1">"span", class_="data"</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="math_change" id="-6N?,zH2n#zASELPNfG.">
+                            <field name="VAR" id="dZ]d_8c,Gj~j$k,0X~|y">total</field>
+                            <field name="NAME">=</field>
+                            <value name="DELTA">
+                              <shadow type="indata" id="5bVGj6H7@SE,NvWC{-Q]">
+                                <field name="indata1">3</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="1ZmDxyV0{mnOQwIPu|VW">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="indata" id="ehSqR-^(Cn!43F~1[OSj">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="convert_block" id="5S$K2hig,1%s^]T;HliF">
+                                    <field name="NAME">int(</field>
+                                    <value name="A">
+                                      <shadow type="indata" id="sKviO1ks1~GDFq#d?%$D">
+                                        <field name="indata1">1</field>
+                                      </shadow>
+                                      <block type="croll_get_text" id="5|4Mp458d+Im:^Uo6Uf)">
+                                        <value name="VAR">
+                                          <block type="variables_get" id="xu`O|j-u+%a?(l/m^3P`">
+                                            <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                                          </block>
+                                        </value>
+                                        <value name="VAR2">
+                                          <shadow type="indata" id="}.y4RksyA!Bn.u9lRL5I">
+                                            <field name="indata1">0</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="indata" id="^_lH@0y!_s]#O=C4Q{[{">
+                                    <field name="indata1">0</field>
+                                  </shadow>
+                                  <block type="convert_block" id="`]l.;47Stv[wrD9N`f%t">
+                                    <field name="NAME">int(</field>
+                                    <value name="A">
+                                      <shadow type="indata" id="x3U?.ce#dvau3.4t+@?=">
+                                        <field name="indata1">1</field>
+                                      </shadow>
+                                      <block type="croll_get_text" id="z)nWA1wJC(d6j{E/?Am8">
+                                        <value name="VAR">
+                                          <block type="variables_get" id="([,/GBXW8h5_ogr%gc01">
+                                            <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                                          </block>
+                                        </value>
+                                        <value name="VAR2">
+                                          <shadow type="indata" id="liOLX5z,~LSqWzz]U(c:">
+                                            <field name="indata1">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="printc" id="8Zu^FPj.a{8dNr)97M2p">
+                                <value name="content">
+                                  <block type="croll_get_text" id="Spl`k#ac^y_NqhB7cPwR">
+                                    <value name="VAR">
+                                      <block type="variables_get" id="KqY6D$8Y_d3~/K.dosh-">
+                                        <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                                      </block>
+                                    </value>
+                                    <value name="VAR2">
+                                      <shadow type="indata" id="0X-Dy#Gntnt2m[7(HLD$">
+                                        <field name="indata1">0</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="printc" id="87fpIvVnp.5^d{7i!BDF">
+                                    <value name="content">
+                                      <block type="croll_get_text" id="=-4JG{-~CDLL8lz|o5^)">
+                                        <value name="VAR">
+                                          <block type="variables_get" id="KVn15!N`T68Q$YTA)!--">
+                                            <field name="VAR" id="Q65i+}zoIhl4Dh}5s9GL">result</field>
+                                          </block>
+                                        </value>
+                                        <value name="VAR2">
+                                          <shadow type="indata" id="okl}O.6`l(?[O::7$D#j">
+                                            <field name="indata1">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="printtv" id="Qk9CL{jl6vnDpdTw@Y{6">
+                                        <value name="content1">
+                                          <shadow type="indata" id=";;fW[fGg4zFurHE_3smD">
+                                            <field name="indata1">"합계:" </field>
+                                          </shadow>
+                                        </value>
+                                        <value name="content2">
+                                          <block type="variables_get" id="?[1`-,uRe|lDgsIkspo$">
+                                            <field name="VAR" id="dZ]d_8c,Gj~j$k,0X~|y">total</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

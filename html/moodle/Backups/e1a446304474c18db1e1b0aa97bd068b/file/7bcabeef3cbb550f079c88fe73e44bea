@@ -1,0 +1,39 @@
+file:///var/www/html/moodle/lib/DIY_Test.html {"mtime":1615879450132,"ctime":1615878911302,"size":996,"etag":"36jgflcf1114","orphaned":false}
+<!-- <!doctype html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="shortcut icon" href="#">
+        <title>hihi</title>
+    </head>
+    <body>
+        <H2>TEST</H2>
+        <HR>
+        DIY 
+    </body>
+</html> -->
+
+<html style="color: green">
+  <!-- this is a comment -->
+  <head>
+      
+    <title>Mixed HTML Example</title>
+    <style>
+      h1 {font-family: comic sans; color: #f0f;}
+      div {background: yellow !important;}
+      body {
+        max-width: 50em;
+        margin: 1em 2em 1em 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mixed HTML Example</h1>
+    <script>
+      function jsFunc(arg1, arg2) {
+        if (arg1 && arg2) document.body.innerHTML = "achoo";
+      }
+    </script>
+  </body>
+</html>

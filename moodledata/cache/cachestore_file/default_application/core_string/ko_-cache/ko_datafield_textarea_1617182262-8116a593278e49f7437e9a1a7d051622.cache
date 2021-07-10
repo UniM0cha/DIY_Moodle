@@ -1,0 +1,1 @@
+a:5:{s:8:"maxbytes";s:45:"임베드 파일의 최대 크기 (바이트)";s:13:"maxbytes_desc";s:43:"0으로 설정하면 기본으로 무제한";s:10:"pluginname";s:16:"텍스트 영역";s:14:"fieldtypelabel";s:23:"텍스트 영역 항목";s:16:"privacy:metadata";s:98:"The Textarea field component does not store any personal data, it uses tables defined in mod_data.";}
